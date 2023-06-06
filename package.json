@@ -1,0 +1,28 @@
+{
+	"name": "te",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint --ext .ts,.tsx,.js,.jsx --cache ./",
+		"lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx --quiet --cache ./",
+		"lint:json": "prettier --write **/*.json"
+	},
+	"author": "",
+	"license": "ISC",
+	"lint-staged": {
+		"**/*.{js,jsx,tsx,ts}": [
+			"eslint --fix"
+		],
+		"**/*.json": [
+			"prettier --write"
+		]
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.3",
+		"prettier": "^2.8.8"
+	}
+}
